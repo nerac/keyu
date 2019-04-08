@@ -106,6 +106,8 @@ greaterThan5([1,2,3,4,5,6,7,8]) // [6,7,8]
 greaterThan5({a:1,b:2,c:3,d:4,e:5,f:6,g:7}) // {f:6,g:7}
 ```
 
+#### Reduce
+
 ### Concurrency
 
 #### Promise.any
@@ -165,3 +167,23 @@ Set the amount of decimals for any given float safelty or returns cero precision
 ```
 setPrecision(3,'1.1234') // -> 1.234
 ```
+
+### Logic
+
+#### Either
+
+Is a try/catch in a functional way, it will try to execute the first function and if this one throws an exception will return the value of the second one.
+
+```
+let parser = either(JSON.parse,33);
+
+parser("") // => 33
+parser('{}') // => {}
+
+```
+
+#### fnOrValue
+
+### Identity
+
+### Not

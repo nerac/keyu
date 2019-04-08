@@ -1,3 +1,5 @@
+const { curry } = require('../fp');
+
 const either = (fn, fa) => (...arg) => {
   try {
     return fn.apply(null, arg);
@@ -6,7 +8,8 @@ const either = (fn, fa) => (...arg) => {
   }
 };
 
-const fnOrValue = (fnOrVal, data) => (typeof fnOrVal === 'function' ? fnOrVal(data) : fnOrVal);
+const fnOrValue = curry((fnOrVal, data) => (typeof fnOrVal === 'function' ? fnOrVal(data) : fnOrVal));
 const identity = x => x;
+const not = fn => (...args) => !fn(...args);
 
-module.exports = { either, fnOrValue, identity };
+module.exports = { either, fnOrValue, identity, not };
