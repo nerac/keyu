@@ -4,7 +4,7 @@
   "description": "Key utilities for everyday use",
   "main": "index.js",
   "scripts": {
-    "vet": "./node_modules/.bin/eslint ./",
+    "vet": "./node_modules/.bin/eslint --fix ./",
     "ci": "NODE_ENV=test ./node_modules/.bin/eslint --fix ./ && nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "test": "NODE_ENV=test mocha",
     "coverage": "NODE_ENV=test nyc npm test"
