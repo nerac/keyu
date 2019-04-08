@@ -8,7 +8,7 @@ Object.prototype.map = function(fn) {
   return this.reduce((acc, v, k) => ({ ...acc, [k]: fn(v, k) }), {});
 };
 Object.prototype.filter = function(fn) {
-  return this.reduce((acc, v, k) => fn(v, k) && { ...acc, [k]: v }, {}) || {};
+  return this.reduce((acc, v, k) => fn(v, k) && { ...acc, [k]: v }, {});
 };
 
 const map = curry((fn, col) => col.map(fn));
