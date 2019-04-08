@@ -8,7 +8,7 @@ const either = (fn, fa) => (...arg) => {
   }
 };
 
-const fnOrValue = curry((fnOrVal, data) => (typeof fnOrVal === 'function' ? fnOrVal(data) : fnOrVal));
+const fnOrValue = curry((fnOrVal, data) => typeof fnOrVal === 'function' ? fnOrVal(data) : fnOrVal);
 const identity = x => x;
 const not = fn => (...args) => !fn(...args);
 
