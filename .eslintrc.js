@@ -14,7 +14,7 @@ module.exports = {
   },
   rules: {
     'no-async-promise-executor': 'error',
-    'no-await-in-loop': 'error',
+    'no-await-in-loop': 'warn',
     'no-extra-parens': 'warn',
     'no-template-curly-in-string': 'error',
     'require-atomic-updates': 'error',
@@ -24,6 +24,8 @@ module.exports = {
     'consistent-return': 'error',
     curly: 'warn',
     'dot-notation': 'warn',
-    eqeqeq: 'error'
+    eqeqeq: 'error',
+    'no-undef': 'off',
+    'no-console': 'off'
   }
 };
