@@ -1,3 +1,4 @@
+/* global it describe */
 const assert = require('assert');
 const { compose, pipe, curry } = require('../fp');
 
@@ -12,7 +13,7 @@ describe('FP', function() {
         foldBy(2),
         incrementBy(1)
       );
-      assert.equal(calc(1), 4);
+      assert.strictEqual(calc(1), 4);
     });
     it('should return a composed function that works with promises', async function() {
       let calc = compose(
@@ -20,7 +21,7 @@ describe('FP', function() {
         rest(1),
         incrementBy(2)
       );
-      assert.equal(await calc(1), 4);
+      assert.strictEqual(await calc(1), 4);
     });
   });
   describe('#pipe()', function() {
@@ -29,7 +30,7 @@ describe('FP', function() {
         foldBy(2),
         incrementBy(1)
       );
-      assert.equal(calc(1), 3);
+      assert.strictEqual(calc(1), 3);
     });
     it('should return a composed function that works with promises', async function() {
       let calc = pipe(
@@ -37,31 +38,31 @@ describe('FP', function() {
         rest(1),
         incrementBy(2)
       );
-      assert.equal(await calc(1), 3);
+      assert.strictEqual(await calc(1), 3);
     });
   });
   describe('#curry()', function() {
     it('should return work with all parameters and with closures', function() {
       let calc = curry((a, b) => a + b);
-      assert.equal(calc(1, 1), calc(1)(1));
+      assert.strictEqual(calc(1, 1), calc(1)(1));
     });
     it('should return with partial application should return a function', function() {
       let calc = curry((a, b) => a + b);
-      assert.equal(typeof calc(1), 'function');
+      assert.strictEqual(typeof calc(1), 'function');
     });
     it('should return an error if no function passed', function() {
       assert.throws(() => {
         curry();
-      }, /Error:[^\[]+\[undefined\].+$/);
+      }, /Error:[^[]+\[undefined\].+$/);
       assert.throws(() => {
         curry(33);
-      }, /Error:[^\[]+\[number\].+$/);
+      }, /Error:[^[]+\[number\].+$/);
       assert.throws(() => {
         curry('');
-      }, /Error:[^\[]+\[string\].+$/);
+      }, /Error:[^[]+\[string\].+$/);
       assert.throws(() => {
         curry(null);
-      }, /Error:[^\[]+\[object\].+$/);
+      }, /Error:[^[]+\[object\].+$/);
     });
   });
 });

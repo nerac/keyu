@@ -4,7 +4,7 @@ const { curry } = require('../fp');
 const parseOr = curry((parser, def) =>
   either(data => {
     let res = parser(data);
-    return res ? res : res === 0 ? res : fnOrValue(def, data);
+    return res || (res === 0 ? res : fnOrValue(def, data));
   }, def)
 );
 
