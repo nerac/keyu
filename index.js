@@ -3,5 +3,6 @@ module.exports = {
   ...require('./concurrency'),
   ...require('./collections'),
   ...require('./logic'),
+  ...require('./types'),
   ...require('./conversions')
 };
