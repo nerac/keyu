@@ -7,7 +7,7 @@
     "lint": "./node_modules/standard/bin/cmd.js ./ && ./node_modules/.bin/eslint --fix ./",
     "ci": "NODE_ENV=test ./node_modules/.bin/eslint --fix ./ && nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "test": "NODE_ENV=test mocha",
-    "coverage": "NODE_ENV=test nyc --reporter=lcov npm test"
+    "coverage": "NODE_ENV=test nyc --reporter=lcov --reporter=text npm test"
   },
   "keywords": [
     "utils",
