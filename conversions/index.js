@@ -10,7 +10,7 @@ const parseOr = curry((parser, def) =>
 
 const jsonOr = parseOr(JSON.parse);
 const floatOr = parseOr(parseFloat);
-const intOr = parseOr(parseInt);
+const intOr = parseOr(num => parseInt(`${num}`));
 
 const setPrecision = curry((value, num) => +num.toFixed(value));
 

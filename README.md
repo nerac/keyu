@@ -184,6 +184,12 @@ parser('{}') // => {}
 
 #### fnOrValue
 
+Detects if the value passed is a function or a value and returns the function applied to the value or the value itself.
+
 ### Identity
 
+Function that given the same input returns the same output.
+
 ### Not
+
+Negates any function that recieves
