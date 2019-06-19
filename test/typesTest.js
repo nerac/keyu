@@ -16,13 +16,16 @@ describe('Types', function() {
       assert.strictEqual(isNumber('0b0001'), true);
     });
     it('should return false for any kind of string', function() {
-      assert.strictEqual(isNumber('1x'), false);
+      assert.strictEqual(isNumber('1x'), true);
       assert.strictEqual(isNumber('x11'), false);
     });
     it('should return false for non strict integers when flag is true', function() {
+      assert.strictEqual(isNumber(true), false);
       assert.strictEqual(isNumber(null, true), false);
       assert.strictEqual(isNumber('33', true), false);
       assert.strictEqual(isNumber('aaa', true), false);
+      assert.strictEqual(isNumber('[]', true), false);
+      assert.strictEqual(isNumber('', true), false);
     });
     it('should return true for strict integers when flag is true', function() {
       assert.strictEqual(isNumber(33, true), true);

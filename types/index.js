@@ -2,7 +2,7 @@
 
 /** Checks **correctly** if the passed type is or not a **number**
  * @argument {*} num any possible data type
- * @argument flag if you want strict numbers or not 
+ * @argument flag if you want strict numbers or not
  * @returns {boolean} indicating if is a number or not (the flag argument can be used to further filter strict numbers)
  * @example
  * isNumber(null) // -> false note isNaN(null) will return false instead
@@ -11,7 +11,7 @@
  * @see [typesTest.js](https://github.com/nerac/keyu/blob/master/test/typesTest.js)
  * @method
  */
-const isNumber = (num, flag) => flag ? typeof(num) === 'number' && num !== null : !isNaN(num) && num !== null;
+const isNumber = (value, strict = false) => Boolean(typeof value === 'number' || (!strict && !isNaN(parseFloat(value))));
 
 /** Checks **correctly** if the passed type is or not an **object**
  * @argument {*} num any possible data type
