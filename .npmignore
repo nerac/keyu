@@ -65,3 +65,23 @@ typings/
 
 # test files
 /test
+
+# Mac specific file
+.DS_Store
+
+# ESlint
+.eslintignore
+.eslintrc.js
+
+# JS doc
+.jsdoc.js
+
+#Prettier
+.prettierignore
+.prettierrc
+
+#CI
+.travis.yml
+
+#Github
+.github/pull_request_template.md
