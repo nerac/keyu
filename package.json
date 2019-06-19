@@ -13,7 +13,10 @@
   },
   "keywords": [
     "utils",
-    "utilities",
+    "fp",
+    "conversions",
+    "async",
+    "types",
     "key"
   ],
   "author": "Carles Iborra",
