@@ -11,7 +11,7 @@
  * @see [typesTest.js](https://github.com/nerac/keyu/blob/master/test/typesTest.js)
  * @method
  */
-const isNumber = (value, strict = false) => Boolean(typeof value === 'number' || (!strict && !isNaN(parseFloat(value))));
+const isNumber = (value, strict = false) => Boolean((typeof value === 'number' && !isNaN(value)) || (!strict && !isNaN(parseFloat(value))));
 
 /** Checks **correctly** if the passed type is or not an **object**
  * @argument {*} num any possible data type

@@ -42,7 +42,7 @@
  * @see [typesTest.js](https://github.com/nerac/keyu/blob/master/test/typesTest.js)
  * @method
  */
-const isNumber &#x3D; (value, strict &#x3D; false) &#x3D;&gt; Boolean(typeof value &#x3D;&#x3D;&#x3D; &#x27;number&#x27; || (!strict &amp;amp;&amp;amp; !isNaN(parseFloat(value))));
+const isNumber &#x3D; (value, strict &#x3D; false) &#x3D;&gt; Boolean(typeof value &#x3D;&#x3D;&#x3D; &#x27;number&#x27; &amp;amp;&amp;amp; !isNaN(value) || (!strict &amp;amp;&amp;amp; !isNaN(parseFloat(value))));
 
 /** Checks **correctly** if the passed type is or not an **object**
  * @argument {*} num any possible data type

@@ -8,6 +8,7 @@ describe('Types', function() {
       assert.strictEqual(isNumber(), false);
       assert.strictEqual(isNumber(null), false);
       assert.strictEqual(isNumber(undefined), false);
+      assert.strictEqual(isNumber(NaN), false);
     });
     it('should return true for any kind of number', function() {
       assert.strictEqual(isNumber('1'), true);
