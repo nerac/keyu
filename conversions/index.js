@@ -65,7 +65,7 @@ const floatOr = parseOr(parseFloat, isNumber);
  * @returns {Int|*} Parsed value or the default one.
  * @method
  */
-const intOr = parseOr((num) => (typeof (num) == 'number') ? (num - num % 1) : parseInt(`${num}`, 10), isNumber);
+const intOr = parseOr(num => (typeof num === 'number' ? num - (num % 1) : parseInt(`${num}`, 10)), isNumber);
 
 /** Fixes the number of decimals of a float.
  * Returns the default value if non numeric value passed.<sup>(curried)</sup>

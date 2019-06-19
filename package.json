@@ -1,6 +1,6 @@
 {
   "name": "keyu",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Key utilities for everyday use",
   "main": "index.js",
   "scripts": {
