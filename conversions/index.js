@@ -58,14 +58,14 @@ const floatOr = parseOr(parseFloat, isNumber);
  * @argument {*} data any kind of data that we want to parse as int
  * @example
  * intOr(-1,"x33x") // -> -1
- * intOr(() => throw Errot("Ups!"),"x33x") // -> Error: Ups!
+ * intOr(() => throw Error("Ups!"),"x33x") // -> Error: Ups!
  * intOr(-1)('45.553') // -> 45
- * @see [Curring](https://en.wikipedia.org/wiki/Currying)
+ * @see [Currying](https://en.wikipedia.org/wiki/Currying)
  * @see [conversionsTest.js](https://github.com/nerac/keyu/blob/master/test/conversionsTest.js)
  * @returns {Int|*} Parsed value or the default one.
  * @method
  */
-const intOr = parseOr(num => parseInt(`${num}`, 10), isNumber);
+const intOr = parseOr((num) => (typeof (num) == 'number') ? (num - num % 1) : parseInt(`${num}`, 10), isNumber);
 
 /** Fixes the number of decimals of a float.
  * Returns the default value if non numeric value passed.<sup>(curried)</sup>
