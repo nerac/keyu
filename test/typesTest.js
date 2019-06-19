@@ -19,6 +19,14 @@ describe('Types', function() {
       assert.strictEqual(isNumber('1x'), false);
       assert.strictEqual(isNumber('x11'), false);
     });
+    it('should return false for non strict integers when flag is true', function() {
+      assert.strictEqual(isNumber(null, true), false);
+      assert.strictEqual(isNumber('33', true), false);
+      assert.strictEqual(isNumber('aaa', true), false);
+    });
+    it('should return true for strict integers when flag is true', function() {
+      assert.strictEqual(isNumber(33, true), true);
+    });
   });
   describe('#isObject()', function() {
     it('should return false for undefined types', function() {
