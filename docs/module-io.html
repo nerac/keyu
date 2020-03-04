@@ -4,7 +4,7 @@
 <head>
   <meta name="generator" content="JSDoc 3.6.3">
   <meta charset="utf-8">
-  <title>keyu 2.1.0 &raquo; Module: io</title>
+  <title>keyu 2.2.0 &raquo; Module: io</title>
   <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Karla:400,400i,700,700i" type="text/css">
   <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Noto+Serif:400,400i,700,700i" type="text/css">
   <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Inconsolata:500" type="text/css">
@@ -15,7 +15,7 @@
   <nav id="jsdoc-navbar" role="navigation" class="jsdoc-navbar">
     <div id="jsdoc-navbar-container">
       <div id="jsdoc-navbar-content">
-        <a href="index.html" class="jsdoc-navbar-package-name">keyu 2.<wbr>1.<wbr>0</a>
+        <a href="index.html" class="jsdoc-navbar-package-name">keyu 2.<wbr>2.<wbr>0</a>
       </div>
     </div>
   </nav>
@@ -34,7 +34,7 @@
           </header>
           <section id="summary">
             <div class="summary-callout">
-              <h2 class="summary-callout-heading">Methods</h2>
+              <h2 class="summary-callout-heading">Method</h2>
               <div class="summary-content">
                 <div class="summary-column">
                   <dl class="dl-summary-callout">
@@ -44,11 +44,6 @@
                   </dl>
                 </div>
                 <div class="summary-column">
-                  <dl class="dl-summary-callout">
-                    <dt><a href="module-io.html#~envOr">envOr(key, defaultValue, postProcessor, env)</a></dt>
-                    <dd>
-                    </dd>
-                  </dl>
                 </div>
                 <div class="summary-column">
                 </div>
@@ -56,7 +51,7 @@
             </div>
           </section>
           <section>
-            <h2>Methods</h2>
+            <h2>Method</h2>
             <section>
               <div class="symbol-detail-labels"><span class="label label-inner">inner</span></div>
               <h3 id="~envOr"><span class="symbol-name">envOr</span><span class="signature"><span class="signature-params">(key, defaultValue, postProcessor, env)</span>&nbsp;&rarr; <span class="signature-returns"> any type</span></span></h3>
@@ -67,101 +62,8 @@
                 </h4>
                 <div>
                   <pre class="prettyprint"><code>//No environment var
-envOr(&#x27;db&#x27;,&#x27;localhost&#x27;); //-&gt; localhost 
-envOr(&#x27;DB&#x27;,&#x27;localhost&#x27;); //-&gt; localhost 
-//PORT&#x3D;3000
-envOr(&#x27;port&#x27;,8080); //-&gt; 3000
-envOr(&#x27;port&#x27;,8080,parseFloat); //-&gt; 3000 (float)</code></pre>
-                </div>
-              </section>
-              <section>
-                <h4>Parameters</h4>
-                <table class="jsdoc-details-table">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Type</th>
-                      <th>Optional</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <p>key</p>
-                      </td>
-                      <td>
-                        <p>String</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>key to get from our environment variables</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>defaultValue</p>
-                      </td>
-                      <td>
-                        <p>any type</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>default value to be returned if key not found</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>postProcessor</p>
-                      </td>
-                      <td>
-                        <p>function()</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>process the value once getted.</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>env</p>
-                      </td>
-                      <td>
-                        <p>Object</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>io source to read environment vars from</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-                <dt>Returns</dt>
-                <dd>
-                  <p><code>any type</code> </p>
-                </dd>
-              </dl>
-              <div class="symbol-detail-labels"><span class="label label-inner">inner</span></div>
-              <h3 id="~envOr"><span class="symbol-name">envOr</span><span class="signature"><span class="signature-params">(key, defaultValue, postProcessor, env)</span>&nbsp;&rarr; <span class="signature-returns"> any type</span></span></h3>
-              <p>Returns and parses an environment var and if does not exists returns the default value</p>
-              <section>
-                <h4>
-                  Example
-                </h4>
-                <div>
-                  <pre class="prettyprint"><code>//No environment var
-envOr(&#x27;db&#x27;,&#x27;localhost&#x27;); //-&gt; localhost 
-envOr(&#x27;DB&#x27;,&#x27;localhost&#x27;); //-&gt; localhost 
+envOr(&#x27;db&#x27;,&#x27;localhost&#x27;); //-&gt; localhost
+envOr(&#x27;DB&#x27;,&#x27;localhost&#x27;); //-&gt; localhost
 //PORT&#x3D;3000
 envOr(&#x27;port&#x27;,8080); //-&gt; 3000
 envOr(&#x27;port&#x27;,8080,parseFloat); //-&gt; 3000 (float)</code></pre>
