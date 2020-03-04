@@ -7,6 +7,13 @@ const { fnOrValue } = require('../logic');
  * @argument {*} defaultValue default value to be returned if key not found
  * @argument {Function} postProcessor process the value once getted.
  * @argument {Object} env io source to read environment vars from
+ * @example
+ * //No environment var
+ * envOr('db','localhost'); //-> localhost
+ * envOr('DB','localhost'); //-> localhost
+ * //PORT=3000
+ * envOr('port',8080); //-> 3000
+ * envOr('port',8080,parseFloat); //-> 3000 (float)
  * @returns {*}
  * @method
  */

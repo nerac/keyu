@@ -2,9 +2,9 @@
 <html>
 
 <head>
-  <meta name="generator" content="JSDoc 3.6.2">
+  <meta name="generator" content="JSDoc 3.6.3">
   <meta charset="utf-8">
-  <title>keyu 2.0.1 &raquo; Module: types</title>
+  <title>keyu 2.2.0 &raquo; Module: types</title>
   <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Karla:400,400i,700,700i" type="text/css">
   <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Noto+Serif:400,400i,700,700i" type="text/css">
   <link rel="stylesheet" href="https://brick.a.ssl.fastly.net/Inconsolata:500" type="text/css">
@@ -15,7 +15,7 @@
   <nav id="jsdoc-navbar" role="navigation" class="jsdoc-navbar">
     <div id="jsdoc-navbar-container">
       <div id="jsdoc-navbar-content">
-        <a href="index.html" class="jsdoc-navbar-package-name">keyu 2.<wbr>0.<wbr>1</a>
+        <a href="index.html" class="jsdoc-navbar-package-name">keyu 2.<wbr>2.<wbr>0</a>
       </div>
     </div>
   </nav>
@@ -41,9 +41,6 @@
                     <dt><a href="module-types.html#~getFuncName">getFuncName([defaultValue])</a></dt>
                     <dd>
                     </dd>
-                    <dt><a href="module-types.html#~getFuncName">getFuncName([defaultValue])</a></dt>
-                    <dd>
-                    </dd>
                     <dt><a href="module-types.html#~isNil">isNil(num)</a></dt>
                     <dd>
                     </dd>
@@ -51,26 +48,15 @@
                 </div>
                 <div class="summary-column">
                   <dl class="dl-summary-callout">
-                    <dt><a href="module-types.html#~isNil">isNil(num)</a></dt>
-                    <dd>
-                    </dd>
                     <dt><a href="module-types.html#~isNumber">isNumber(num, flag)</a></dt>
                     <dd>
                     </dd>
-                    <dt><a href="module-types.html#~isNumber">isNumber(num, flag)</a></dt>
+                    <dt><a href="module-types.html#~isObject">isObject(num)</a></dt>
                     <dd>
                     </dd>
                   </dl>
                 </div>
                 <div class="summary-column">
-                  <dl class="dl-summary-callout">
-                    <dt><a href="module-types.html#~isObject">isObject(num)</a></dt>
-                    <dd>
-                    </dd>
-                    <dt><a href="module-types.html#~isObject">isObject(num)</a></dt>
-                    <dd>
-                    </dd>
-                  </dl>
                 </div>
               </div>
             </div>
@@ -134,115 +120,6 @@ getFuncName(&quot;ups&quot;) // -&gt; &quot;ups&quot;</code></pre>
                 </dd>
               </dl>
               <div class="symbol-detail-labels"><span class="label label-inner">inner</span></div>
-              <h3 id="~getFuncName"><span class="symbol-name">getFuncName</span><span class="signature"><span class="signature-params">([defaultValue])</span>&nbsp;&rarr; <span class="signature-returns"> String</span></span></h3>
-              <p>Returns the name of the function in which is called.</p>
-              <section>
-                <h4>
-                  Example
-                </h4>
-                <div>
-                  <pre class="prettyprint"><code>const hello &#x3D; () &#x3D;&gt; getFuncName()
-hello() // -&gt; &quot;hello&quot;
-getFuncName() // -&gt; &quot;Unknown&quot;
-getFuncName(&quot;ups&quot;) // -&gt; &quot;ups&quot;</code></pre>
-                </div>
-              </section>
-              <section>
-                <h4>Parameter</h4>
-                <table class="jsdoc-details-table">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Type</th>
-                      <th>Optional</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <p>defaultValue</p>
-                      </td>
-                      <td>
-                        <p>String</p>
-                      </td>
-                      <td>
-                        <p>Yes</p>
-                      </td>
-                      <td>
-                        <p>string for unknown calls.</p>
-                        <p>Defaults to <code>Unknown</code>.</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-                <dt>See also</dt>
-                <dd>
-                  <p><a href="https://github.com/nerac/keyu/blob/master/test/typesTest.js">typesTest.js</a></p>
-                </dd>
-                <dt>Returns</dt>
-                <dd>
-                  <p><code>String</code> <p>indicating the possible name of the function</p>
-                  </p>
-                </dd>
-              </dl>
-              <div class="symbol-detail-labels"><span class="label label-inner">inner</span></div>
-              <h3 id="~isNil"><span class="symbol-name">isNil</span><span class="signature"><span class="signature-params">(num)</span>&nbsp;&rarr; <span class="signature-returns"> boolean</span></span></h3>
-              <p>Checks if the passed type is a non defined value, either <code>undefined</code> or <code>null</code></p>
-              <section>
-                <h4>
-                  Example
-                </h4>
-                <div>
-                  <pre class="prettyprint"><code>isNil(null) // -&gt; true
-isNil(3) // -&gt; false
-isNil() // -&gt; true
-isNil(undefined) // -&gt; true</code></pre>
-                </div>
-              </section>
-              <section>
-                <h4>Parameter</h4>
-                <table class="jsdoc-details-table">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Type</th>
-                      <th>Optional</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <p>num</p>
-                      </td>
-                      <td>
-                        <p>any type</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>any possible data type</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-                <dt>See also</dt>
-                <dd>
-                  <p><a href="https://github.com/nerac/keyu/blob/master/test/typesTest.js">typesTest.js</a></p>
-                </dd>
-                <dt>Returns</dt>
-                <dd>
-                  <p><code>boolean</code> <p>indicating if it's an non defined</p>
-                  </p>
-                </dd>
-              </dl>
-              <div class="symbol-detail-labels"><span class="label label-inner">inner</span></div>
               <h3 id="~isNil"><span class="symbol-name">isNil</span><span class="signature"><span class="signature-params">(num)</span>&nbsp;&rarr; <span class="signature-returns"> boolean</span></span></h3>
               <p>Checks if the passed type is a non defined value, either <code>undefined</code> or <code>null</code></p>
               <section>
@@ -361,127 +238,6 @@ isNil(undefined) // -&gt; true</code></pre>
                 <dt>Returns</dt>
                 <dd>
                   <p><code>boolean</code> <p>indicating if is a number or not (the flag argument can be used to further filter strict numbers)</p>
-                  </p>
-                </dd>
-              </dl>
-              <div class="symbol-detail-labels"><span class="label label-inner">inner</span></div>
-              <h3 id="~isNumber"><span class="symbol-name">isNumber</span><span class="signature"><span class="signature-params">(num, flag)</span>&nbsp;&rarr; <span class="signature-returns"> boolean</span></span></h3>
-              <p>Checks <strong>correctly</strong> if the passed type is or not a <strong>number</strong></p>
-              <section>
-                <h4>
-                  Examples
-                </h4>
-                <div>
-                  <pre class="prettyprint"><code>isNumber(null) // -&gt; false note isNaN(null) will return false instead</code></pre>
-                </div>
-                <div>
-                  <pre class="prettyprint"><code>isNumber(&quot;33&quot;, true) // -&gt; false since the strict flag is set and &quot;33&quot; is not a strict number</code></pre>
-                </div>
-              </section>
-              <section>
-                <h4>Parameters</h4>
-                <table class="jsdoc-details-table">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Type</th>
-                      <th>Optional</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <p>num</p>
-                      </td>
-                      <td>
-                        <p>any type</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>any possible data type</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>flag</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>if you want strict numbers or not</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-                <dt>See also</dt>
-                <dd>
-                  <p><a href="https://github.com/nerac/keyu/blob/master/test/typesTest.js">typesTest.js</a></p>
-                </dd>
-                <dt>Returns</dt>
-                <dd>
-                  <p><code>boolean</code> <p>indicating if is a number or not (the flag argument can be used to further filter strict numbers)</p>
-                  </p>
-                </dd>
-              </dl>
-              <div class="symbol-detail-labels"><span class="label label-inner">inner</span></div>
-              <h3 id="~isObject"><span class="symbol-name">isObject</span><span class="signature"><span class="signature-params">(num)</span>&nbsp;&rarr; <span class="signature-returns"> boolean</span></span></h3>
-              <p>Checks <strong>correctly</strong> if the passed type is or not an <strong>object</strong></p>
-              <section>
-                <h4>
-                  Example
-                </h4>
-                <div>
-                  <pre class="prettyprint"><code>isObject(null) // -&gt; false note that typeof will return true
-isObject({}) // -&gt; true
-isObject(new Error()) // -&gt; true</code></pre>
-                </div>
-              </section>
-              <section>
-                <h4>Parameter</h4>
-                <table class="jsdoc-details-table">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Type</th>
-                      <th>Optional</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <p>num</p>
-                      </td>
-                      <td>
-                        <p>any type</p>
-                      </td>
-                      <td>
-                        <p>&nbsp;</p>
-                      </td>
-                      <td>
-                        <p>any possible data type</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-              <dl class="dl-compact">
-                <dt>See also</dt>
-                <dd>
-                  <p><a href="https://github.com/nerac/keyu/blob/master/test/typesTest.js">typesTest.js</a></p>
-                </dd>
-                <dt>Returns</dt>
-                <dd>
-                  <p><code>boolean</code> <p>indicating if it's an object or not</p>
                   </p>
                 </dd>
               </dl>
@@ -548,7 +304,7 @@ isObject(new Error()) // -&gt; true</code></pre>
   <footer id="jsdoc-footer" class="jsdoc-footer">
     <div id="jsdoc-footer-container">
       <p>
-        Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc</a> 3.6.2 on June 19, 2019.
+        Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc</a> 3.6.3 on March 4, 2020.
       </p>
     </div>
   </footer>
