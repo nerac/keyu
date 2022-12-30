@@ -31,7 +31,7 @@
     "jsdoc": "^3.6.3",
     "jsdoc-baseline": "^0.1.1",
     "lint-staged": "^8.1.5",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^14.1.1",
     "prettier": "1.16.4",
